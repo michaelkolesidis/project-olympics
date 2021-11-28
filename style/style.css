@@ -101,9 +101,9 @@ nav :nth-child(3) {
 .container {
     width: fit-content;
 
-    
+
     /* Setting both side margins to auto in order to center the container horizontally */
-    margin: 15rem auto 4rem auto;
+    margin: 15rem auto 6rem auto;
     /* Container elements displayed as a vertical flex */
     display: flex;
     flex-direction: column;
@@ -276,15 +276,15 @@ footer a:hover {
     .row:hover .name {
         transform: perspective(900px) translateZ(180px);
     }
-    
+
     .row:hover .time {
         transform: perspective(800px) translateZ(180px);
     }
-    
+
     .row:hover .rank {
         transform: perspective(800px) translateZ(280px);
     }
-    
+
 
     aside {
         display: block;
@@ -301,12 +301,6 @@ footer a:hover {
         margin: 0 0 2rem 2rem;
         width: auto;
     }
-
-    footer {
-        position: absolute;
-        bottom: 0;
-    }
-
 }
 
 /* Large screens */
