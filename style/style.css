@@ -17,8 +17,9 @@
 /****************************** GENERAL RULES ******************************/
 html,
 body {
-    margin: 0;
+    margin: auto;
     padding: 0;
+    box-sizing: border-box;
     /* The gradient to be displayed as the body background */
     background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
     background-size: 400% 400%;
@@ -29,9 +30,7 @@ body {
     /* Using the imported font family */
     font-family: 'Poppins', sans-serif;
     font-size: 0.7em;
-    margin: auto;
     line-height: 1.5rem;
-    box-sizing: border-box;
 }
 
 /* Background gradient animation keyframes */
@@ -65,18 +64,17 @@ iframe {
 
 /****************************** NAVIGATION BAR ******************************/
 nav {
-    top: 0px;
     position: fixed;
+    top: 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    border-bottom: 1px solid var(--border);
     background: var(--background);
-    /* height: 4.3rem; */
     align-items: center;
     justify-content: center;
     line-height: 2rem;
-    border-bottom: 1px solid var(--border);
 }
 
 img.logo {
@@ -87,11 +85,13 @@ nav a {
     position: relative;
     top: 25%;
     bottom: 25%;
+    padding: 0.5rem;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 0.5rem;
 }
 
+/* The logo, the cental element in horizontal flex on large screens,
+ * will be the first element on vertical flex on mobile */
 nav :nth-child(3) {
     order: -1;
 }
@@ -99,14 +99,12 @@ nav :nth-child(3) {
 
 /******************************  CONTAINER ******************************/
 .container {
-    width: fit-content;
-
-
-    /* Setting both side margins to auto in order to center the container horizontally */
-    margin: 15rem auto 6rem auto;
     /* Container elements displayed as a vertical flex */
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    /* Setting both side margins to auto in order to center the container horizontally */
+    margin: 15rem auto 6rem auto;
     background: var(--background);
     box-shadow: 4px 4px 4px 2px var(--shadow);
     /* Set cursor to default to avoid it being transformed
@@ -137,7 +135,6 @@ main {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 3.5fr 1fr;
     background: var(--background);
-    grid-area: table;
     padding: 2rem;
 }
 
@@ -186,10 +183,10 @@ main .notes {
 
 /******************************  RACE REPORT ******************************/
 aside {
-    border-top: 1px solid var(--border);
-    margin: 2rem;
     display: flex;
     flex-direction: column;
+    border-top: 1px solid var(--border);
+    margin: 2rem;
     align-items: center;
     justify-content: center;
 }
@@ -203,7 +200,6 @@ aside h2 {
 aside iframe {
     width: 100%;
 }
-
 
 aside p {
     max-width: 50rem;
@@ -245,11 +241,6 @@ footer a:hover {
         padding: 0 0 1.5rem 0;
         box-shadow: 4px 4px 4px 2px var(--shadow);
         border-bottom: 0;
-    }
-
-    nav a {
-        /* Setting transition time for all a element of nav */
-        padding: 0;
     }
 
     nav :nth-child(3) {
