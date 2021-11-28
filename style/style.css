@@ -28,7 +28,7 @@ body {
     animation: gradient 10s ease infinite;
     /* Using the imported font family */
     font-family: 'Poppins', sans-serif;
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin: auto;
     line-height: 1.5rem;
     box-sizing: border-box;
