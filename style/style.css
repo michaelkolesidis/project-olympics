@@ -1,0 +1,349 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Variable declaration in :root pseudo-class */
+:root {
+    /* Colors */
+    --background: rgb(255, 255, 255);
+    --shadow: rgba(105, 105, 105, 0.2);
+    --border: rgb(126, 126, 126);
+    --gradient-color-1: #e9db8c;
+    --gradient-color-2: #df94cc;
+    --gradient-color-3: #74c3e0;
+    --gradient-color-4: #72e0c7;
+}
+
+
+/****************************** GENERAL RULES ******************************/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* The gradient to be displayed as the body background */
+    background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
+    background-size: 400% 400%;
+    /* Animating the background gradient, 10 seconds for a full animation, ease transition
+     * effect with a slow start, then fast and end slowly, infinite sets the animation to
+     * run for an infinite time */
+    animation: gradient 10s ease infinite;
+    /* Using the imported font family */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6em;
+    margin: auto;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Background gradient animation keyframes */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Remove default link styles */
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+iframe {
+    border: none;
+}
+
+
+/****************************** NAVIGATION BAR ******************************/
+nav {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background: var(--background);
+    /* height: 4.3rem; */
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+img.logo {
+    height: 3rem;
+}
+
+nav a {
+    position: relative;
+    top: 25%;
+    bottom: 25%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+nav :nth-child(3) {
+    order: -1;
+}
+
+
+/******************************  CONTAINER ******************************/
+.container {
+    width: fit-content;
+
+    
+    /* Setting both side margins to auto in order to center the container horizontally */
+    margin: 15rem auto 4rem auto;
+    /* Container elements displayed as a vertical flex */
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    box-shadow: 4px 4px 4px 2px var(--shadow);
+    /* Set cursor to default to avoid it being transformed
+     * to the text cursor while hovering over text */
+    cursor: default;
+}
+
+
+/******************************  HEADER ******************************/
+header {
+    text-align: center;
+}
+
+header h1 {
+    padding: 2rem;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    /* Text color gradient */
+    background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/******************************  RESULTS TABLE ******************************/
+main {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 3.5fr 1fr;
+    background: var(--background);
+    grid-area: table;
+    padding: 2rem;
+}
+
+main .table-header {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Class with elements to be centrally aligned */
+.center {
+    text-align: center;
+}
+
+/* Creating an invisible container to group elements in a row */
+.row {
+    display: contents;
+    transition: all 1s;
+}
+
+.row div {
+    transition: all 1s;
+    margin: 0.6rem 1.6rem;
+    font-size: 1.4rem;
+}
+
+img.flag {
+    height: 1.2rem;
+    width: auto;
+    box-shadow: 1px 1px 1px 1px rgb(98, 98, 98, 0.1);
+}
+
+.surname {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.row .country-name {
+    display: none;
+}
+
+main .notes {
+    display: none;
+}
+
+
+/******************************  RACE REPORT ******************************/
+aside {
+    border-top: 1px solid var(--border);
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+aside h2 {
+    font-size: 1.6rem;
+    margin: 3rem 0 2rem;
+    text-align: center;
+}
+
+aside iframe {
+    width: 100%;
+}
+
+
+aside p {
+    max-width: 50rem;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+
+/******************************  FOOTER ******************************/
+footer {
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    color: var(--background);
+    font-size: 1.4rem;
+    font-weight: 600;
+    word-spacing: 0.2rem;
+    cursor: default;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/******************************  MEDIA QUERIES ******************************/
+/* Medium screens */
+@media all and (min-width: 600px) {
+    .container {
+        margin-top: 10rem;
+    }
+
+    nav {
+        flex-direction: row;
+        height: 4.3rem;
+        line-height: 4rem;
+        justify-content: space-around;
+        padding: 0 0 1.5rem 0;
+        box-shadow: 4px 4px 4px 2px var(--shadow);
+        border-bottom: 0;
+    }
+
+    nav a {
+        /* Setting transition time for all a element of nav */
+        padding: 0;
+    }
+
+    nav :nth-child(3) {
+        order: 0;
+    }
+
+    main {
+        grid-template-columns: 0.5fr 1.5fr 3.5fr 1fr;
+    }
+
+    main .new-line {
+        display: none;
+    }
+
+    .row .country-name {
+        display: inline;
+        transition: color 1s;
+    }
+
+    .row:hover .country-name {
+        color: var(--background);
+    }
+
+    .row:hover .name {
+        transform: perspective(900px) translateZ(180px);
+    }
+    
+    .row:hover .time {
+        transform: perspective(800px) translateZ(180px);
+    }
+    
+    .row:hover .rank {
+        transform: perspective(800px) translateZ(280px);
+    }
+    
+
+    aside {
+        display: block;
+    }
+
+    aside h2 {
+        text-align: left;
+    }
+
+    /* Floating the YouTube player on the right, 
+     * with the text wrapping around */
+    aside iframe {
+        float: right;
+        margin: 0 0 2rem 2rem;
+        width: auto;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+
+    nav a {
+        transition: transform 2s;
+    }
+
+    /* Elements on the left rotate to the right and come closer to the viewer on the Z-axis */
+    nav a.left:hover {
+        transform: perspective(200px) rotateY(20deg) translateZ(100px);
+    }
+
+    /* Cental element moves slightly lower on the Y-axsis and comes closer to the view on the Z-axis */
+    nav a.center:hover {
+        transform: perspective(200px) translateY(8px) translateZ(80px);
+    }
+
+    /* Elements on the right rotate to the left and come closer to the viewer on the Z-axis */
+    nav a.right:hover {
+        transform: perspective(200px) rotateY(-20deg) translateZ(100px);
+    }
+
+    .container {
+        max-width: 1000px;
+    }
+
+    header .new-line {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 0.5fr 1.5fr 3.5fr 1fr 1.3fr;
+    }
+
+    main .notes {
+        display: inline;
+    }
+}
