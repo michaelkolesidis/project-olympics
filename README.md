@@ -18,3 +18,4 @@ An animation-abundant responsive website showing the result's of the 100m women'
 <img src="https://raw.githubusercontent.com/michaelkolesidis/project-olympics/main/screenshots/mobile-01.png">
 
 
+Report paragraphs source: <a href="https://www.reuters.com/lifestyle/sports/athletics-thompson-herah-leads-jamaican-sweep-womens-100m-2021-07-31/">Reuters</a>
