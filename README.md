@@ -4,7 +4,7 @@
 
 An animation-abundant responsive website showing the results of the 100m women's finals in the Tokyo 2020 Olympics™. It is built with CSS and HTML.
 
-<p align="center"><a target="_blank" href="https://project-olympics.netlify.app/">Try me on Netlify!</a><p>
+<h3 align="center"><a target="_blank" href="https://project-olympics.netlify.app/">Try me!</a><h3>
 
 ## Technologies Used
 <a href="https://en.wikipedia.org/wiki/CSS"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/css3/css3-plain.svg" height="50px" /></a>
