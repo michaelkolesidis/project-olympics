@@ -2,9 +2,14 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4a6896fa-b48c-42bf-b8dd-9ac1f97f8a9c/deploy-status)](https://app.netlify.com/sites/project-olympics/deploys)
 
-An CSS-animation-abundant responsive website showing the results of the 100m women's finals in the Tokyo 2020 Olympics™.
+An animation-abundant responsive website showing the results of the 100m women's finals in the Tokyo 2020 Olympics™. It is built with CSS and HTML.
 
 <p align="center"><a target="_blank" href="https://project-olympics.netlify.app/">Try me on Netlify!</a><p>
+
+## Technologies Used
+<a href="https://en.wikipedia.org/wiki/CSS"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/css3/css3-plain.svg" height="50px" /></a>
+<a href="https://en.wikipedia.org/wiki/HTML5"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/html5/html5-plain.svg" height="50px" /></a>
+
   
 ## Screenshots
 ### Desktop
