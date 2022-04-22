@@ -11,6 +11,14 @@ An animation-abundant responsive website showing the results of the 100m women's
 <a href="https://en.wikipedia.org/wiki/HTML5"><img src="https://github.com/michaelkolesidis/tech-icons/blob/main/icons/html5/html5-plain.svg" height="50px" /></a>
 
   
+  
+## License
+
+Copyright (c) 2022 Michael Kolesidis<br>
+Licensed under the [GNU General Public License v3.0](https://github.com/michaelkolesidis/webproject-script/blob/main/LICENSE).
+  
+  
+  
 ## Screenshots
 ### Desktop
 <img src="https://raw.githubusercontent.com/michaelkolesidis/project-olympics/main/screenshots/desktop-01.png">
